@@ -1,0 +1,16 @@
+C:\Users\Марат\source\repos\Transform1\Transform1\bin\Debug\Transform1.exe.config
+C:\Users\Марат\source\repos\Transform1\Transform1\bin\Debug\Transform1.exe
+C:\Users\Марат\source\repos\Transform1\Transform1\bin\Debug\Transform1.pdb
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.csproj.AssemblyReference.cache
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\MainWindow.g.cs
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\App.g.cs
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1_MarkupCompile.cache
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1_MarkupCompile.lref
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\MainWindow.baml
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.g.resources
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.Properties.Resources.resources
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.csproj.GenerateResource.cache
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.csproj.CoreCompileInputs.cache
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.exe
+C:\Users\Марат\source\repos\Transform1\Transform1\obj\Debug\Transform1.pdb

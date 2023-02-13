@@ -1,0 +1,186 @@
+﻿<Window x:Class="Transform1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transform1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1200">
+    <Grid>
+        <Canvas>
+            <Canvas>
+                <Button Canvas.Left="428" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Top">Копировать</Button>
+                <Button Canvas.Left="528" Canvas.Top="15" HorizontalAlignment="Left" VerticalAlignment="Top">Вырезать</Button>
+                <Button HorizontalAlignment="Left" Canvas.Left="612" VerticalAlignment="Top" Canvas.Top="15">Вставить</Button>
+                <ListBox Canvas.Left="448" Canvas.Top="53" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="216">
+                    <ListBoxItem>RenderTransform.Angle</ListBoxItem>
+                    <ListBoxItem>RenderTransform.AngleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterY</ListBoxItem>
+                    <ListBoxItem>RenderTransform.X</ListBoxItem>
+                    <ListBoxItem>RenderTransform.Y</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleY</ListBoxItem>
+                </ListBox>
+            </Canvas>
+            <Canvas x:Name="FirstCanvas" Opacity="0.4">
+                <Canvas.RenderTransform>
+                    <SkewTransform AngleY="4" ></SkewTransform>
+                </Canvas.RenderTransform>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="GotFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FirstCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="4" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="0" To="450"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.4" To="1"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="LostFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FirstCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="0" To="4"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="450" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0.4"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Button Canvas.Left="49" Canvas.Top="274" HorizontalAlignment="Left" VerticalAlignment="Top">Копировать</Button>
+                <Button Canvas.Left="132" Canvas.Top="275" HorizontalAlignment="Left" VerticalAlignment="Top">Вырезать</Button>
+                <Button HorizontalAlignment="Left" Canvas.Left="205" VerticalAlignment="Top" Canvas.Top="277">Вставить</Button>
+                <ListBox Canvas.Left="49" Canvas.Top="318" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="200">
+                    <ListBoxItem>RenderTransform.Angle</ListBoxItem>
+                    <ListBoxItem>RenderTransform.AngleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterY</ListBoxItem>
+                    <ListBoxItem>RenderTransform.X</ListBoxItem>
+                    <ListBoxItem>RenderTransform.Y</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleY</ListBoxItem>
+                </ListBox>
+
+            </Canvas>
+            <Canvas x:Name="ThirdCanvas" Opacity="0.4">
+                <Canvas.RenderTransform>
+                    <SkewTransform AngleY="-4"></SkewTransform>
+                </Canvas.RenderTransform>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="GotFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ThirdCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="-4" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Top" From="0" To="-70"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="0" To="-450"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.4" To="1"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="LostFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="ThirdCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="0" To="-4"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="-450" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Top" From="-70" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0.4"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Button Canvas.Left="940" Canvas.Top="360" HorizontalAlignment="Left" VerticalAlignment="Top">Копировать</Button>
+                <Button Canvas.Left="1032" Canvas.Top="358" HorizontalAlignment="Left" VerticalAlignment="Top">Вырезать</Button>
+                <Button HorizontalAlignment="Left" Canvas.Left="1106" VerticalAlignment="Top" Canvas.Top="355">Вставить</Button>
+                <ListBox Canvas.Left="968" Canvas.Top="391" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="200">
+                    <ListBoxItem>RenderTransform.Angle</ListBoxItem>
+                    <ListBoxItem>RenderTransform.AngleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterY</ListBoxItem>
+                    <ListBoxItem>RenderTransform.X</ListBoxItem>
+                    <ListBoxItem>RenderTransform.Y</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleY</ListBoxItem>
+                </ListBox>
+            </Canvas>
+            <Canvas x:Name="FifthCanvas" Opacity="0.8">
+                <Canvas.RenderTransform>
+                    <SkewTransform AngleY="2"></SkewTransform>
+                </Canvas.RenderTransform>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="GotFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FifthCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="2" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="0" To="200"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.8" To="1"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="LostFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FifthCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="0" To="2"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="200" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0.8"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Button Canvas.Left="289" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top">Копировать</Button>
+                <Button Canvas.Left="376" Canvas.Top="295" HorizontalAlignment="Left" VerticalAlignment="Top">Вырезать</Button>
+                <Button HorizontalAlignment="Left" Canvas.Left="439" VerticalAlignment="Center" Canvas.Top="297" Width="65">Вставить</Button>
+                <ListBox Canvas.Left="282" Canvas.Top="329" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="200">
+                    <ListBoxItem>RenderTransform.Angle</ListBoxItem>
+                    <ListBoxItem>RenderTransform.AngleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterY</ListBoxItem>
+                    <ListBoxItem>RenderTransform.X</ListBoxItem>
+                    <ListBoxItem>RenderTransform.Y</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleY</ListBoxItem>
+                </ListBox>
+            </Canvas>
+            <Canvas x:Name="FouthCanvas" Opacity="0.8">
+                <Canvas.RenderTransform>
+                    
+                        <SkewTransform AngleY="-2"   ></SkewTransform>
+                </Canvas.RenderTransform>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="GotFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FouthCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="-2" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="0" To="-200"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Top" From="0" To="-50"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.8" To="1"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="LostFocus" >
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="FouthCanvas">
+                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.AngleY" From="0" To="-2"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Left" From="-200" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Top" From="-50" To="0"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0.8"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Button Canvas.Left="713" Canvas.Top="333" HorizontalAlignment="Left" VerticalAlignment="Top">Копировать</Button>
+                <Button Canvas.Left="798" Canvas.Top="332" HorizontalAlignment="Left" VerticalAlignment="Top">Вырезать</Button>
+                <Button HorizontalAlignment="Left" Canvas.Left="872" VerticalAlignment="Top" Canvas.Top="332">Вставить</Button>
+                <ListBox Canvas.Left="724" Canvas.Top="363" HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="200">
+                    <ListBoxItem>RenderTransform.Angle</ListBoxItem>
+                    <ListBoxItem>RenderTransform.AngleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.CenterY</ListBoxItem>
+                    <ListBoxItem>RenderTransform.X</ListBoxItem>
+                    <ListBoxItem>RenderTransform.Y</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleX</ListBoxItem>
+                    <ListBoxItem>RenderTransform.ScaleY</ListBoxItem>
+                </ListBox>
+            </Canvas>
+        </Canvas>
+    </Grid>
+</Window>
